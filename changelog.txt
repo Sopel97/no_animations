@@ -1,0 +1,23 @@
+---------------------------------------------------------------------------------------------------
+Version 1.1.4
+Date 2022-07-20
+  Fixes:
+    - Remove animations from "animation" prototypes.
+    - Remove animations from accumulators.
+    - Remove animations from cars.
+    - Fix many edge cases.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 2021-12-13
+  Fixes:
+    - Fix startup settings not being respected
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 2021-07-11
+  Fixes:
+    - Fix incompatibility with tapeline
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: *
+  Features:
+    - Release
