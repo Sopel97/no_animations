@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version 1.1.5
+Date: 2022-07-22
+  Features:
+    - Optionally remove (not removed by default) inserter hand animations. No performance impact but users report it to be distracting.
+---------------------------------------------------------------------------------------------------
 Version 1.1.4
 Date 2022-07-20
   Fixes:
