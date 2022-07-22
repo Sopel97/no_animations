@@ -97,12 +97,33 @@ do
         return exceptions_by_name[e.name]
     end
 
+    local function make_inserter_hand_transparent(e)
+        local nothing = {
+            filename = "__no_animations__/graphics/nothing.png",
+            priority = "extra-high",
+            width = 1,
+            height = 1
+        }
+
+        e.hand_base_picture = nothing
+        e.hand_closed_picture = nothing
+        e.hand_open_picture = nothing
+        e.hand_base_shadow = nothing
+        e.hand_closed_shadow = nothing
+        e.hand_open_shadow = nothing
+        e.draw_hand_item = false
+    end
+
     local function reset_animation_of_thing(e)
         if is_exception(e) then
             return
         end
 
         e.working_visualisations = nil
+
+        if e.type == "inserter" then
+            make_inserter_hand_transparent(e)
+        end
 
         if e.type == "animation" then
             reset_animations(e)
@@ -255,7 +276,8 @@ do
         end
     end
 
-    for _, entity_type in pairs(no_animations_get_entity_types()) do
+    for _, entry in pairs(no_animations_get_entity_types()) do
+        local entity_type = entry[1]
         if settings.startup["no-animations-disable-animations-for-" .. entity_type].value then
             reset_animation_of_things(entity_type)
         end
