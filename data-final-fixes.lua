@@ -111,7 +111,7 @@ do
         e.hand_base_shadow = nothing
         e.hand_closed_shadow = nothing
         e.hand_open_shadow = nothing
-        e.draw_hand_item = false
+        e.draw_held_item = false
     end
 
     local function reset_animation_of_thing(e)
