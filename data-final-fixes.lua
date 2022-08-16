@@ -271,8 +271,10 @@ do
     end
 
     local function reset_animation_of_things(type)
-        for _, e in pairs(data.raw[type]) do
-            reset_animation_of_thing(e)
+        if data.raw[type] then
+            for _, e in pairs(data.raw[type]) do
+                reset_animation_of_thing(e)
+            end
         end
     end
 
